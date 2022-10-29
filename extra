@@ -1,0 +1,118 @@
+// Setup
+Visual Studio code (https://code.visualstudio.com/) (Install)
+NodeJs (https://nodejs.org/en/) (Install)
+GitBash (https://git-scm.com/downloads) (Install)
+Github (https://github.com/) (Create Account)
+Follow (https://github.com/Aakashdeveloper)
+
+Chrome
+> https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+extensions
+> Vscode-icons
+> TabNine
+> Spell Check
+> Git History
+> Git Lens
+
+
+NPM
+
+FullStack Flipkart app
+login logout (jwt)
+Flipcart+login logout
+Template Forms
+Reactive Forms
+Testing
+Multilingual
+Ang Material
+LazyLoading
+
+Deployment
+> Github
+> Jenkins
+> AWS
+> Heroku
+> Netlify
+> Angular over node server
+> Angular over python server
+> Docker 
+> nginx
+
+Dummy api
+
+>>>>>>>>NO Covered<<<<<>>>>>
+> HTML CSS JAVASCRIPT
+> No Api Building (app,loginlogout)
+
+/////////////////////
+JSON > JavaScript Object Notation
+[
+    {
+        "name":"John",
+        "city":"Amsterdam"
+    },
+    {
+        "name":"Amit",
+        "city":"Oslo"
+    },
+    {
+        "name":"Nikita",
+        "city":"Stockholm",
+        "language":"Swedish"
+    }
+]
+
+/////////// 2,155,497
+npm > Node Package manager
+
+/////Package.json
+> Starting point to app
+> Command to start, test, build the app
+> All the packages require for the app
+> Meta Data (name,version,description)
+
+
+////Step to generate package.json
+**NodeJs must be installed in laptop
+> Open the command prompt/terminal and navigate to the folder
+> npm init
+> Answer all questions
+> type "yes"
+
+////Step to install package////
+**NodeJs must be installed in laptop
+> Open the command prompt/terminal and navigate to the folder
+> npm i packagename
+
+> npm i packagename@5.9.0
+
+
+/// Step to setup angular app in laptop
+
+# window
+* One time in laptop
+> Open the cmd as administrator
+> npm i -g @angular/cli
+
+* Next every time you need new app
+> open the command prompt
+> Go inside the folder where you need app
+> ng new appname
+
+# Mac/linux
+* One time in laptop
+> Open terminal
+> sudo npm i -g @angular/cli
+
+* Next every time you need new app
+> open the terminal
+> Go inside the folder where you need app
+> ng new appname
+
+
+
+package-lock > it will contains the dependcy tree(child package versions)
+node_modules > folder which have all the package we require
+.gitignore > Avoid file to push into git
+Readme.md > Detail description of the app in text format
