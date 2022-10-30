@@ -116,3 +116,70 @@ package-lock > it will contains the dependcy tree(child package versions)
 node_modules > folder which have all the package we require
 .gitignore > Avoid file to push into git
 Readme.md > Detail description of the app in text format
+
+
+//////////////
+Angular
+> Angular is a frontend framework that help to build single page applications
+using component base structure
+
+
+/// Step to run angular app
+> Go inside the folder where app is present
+> npm start
+> http://localhost:4200
+
+Package.json > Starting point to app
+package-lock > it will contains the dependcy tree(child package versions)
+node_modules > folder which have all the package we require
+.gitignore > Avoid file to push into git
+Readme.md > Detail description of the app in text format
+tsconfig.json > this help to transpile configuration (convert into js)
+tsconfig.app.json > this file have folder location for actual transpile
+karams> Testing configuration
+angular.json > this is the first file to run the app
+             > Any common css/js
+             > Which is the first .ts and .html
+.editorconfig > to make same coding standards among developers
+.browserlistrc > what all browser support we have
+
+src>>>>>>>>>>>>>>>>
+style.css > common css for the whole app
+polyfills > make app compitable for IE
+main.ts > this is the first .ts file that run
+index.html > first .html file load in browser
+
+
+let a = 10
+let b = "Hi"
+let c = true
+
+a:number = 10
+b:string = "Hii"
+c:boolean = true
+
+
+/////////////////////////////
+package.json > angular.json > main.ts > app.module.ts > app.component.ts
+                        ||
+                        ||  Compile code into single html
+                        \/
+                    index.html (load on browser)
+
+////Building Block/////
+Modules >>>>> NgModule
+> Parent of the app
+> All block have to declare here
+
+Component >>>>> Component
+> HTML, Css, logics
+
+Pipe >>>>> Pipe,Pipetransform
+> Run time data manipulation
+
+Services >>>>> Injectable
+> To connect with external Agent
+> Dependency Injection
+
+Routing >>>>> NgModule
+> To Navigate between the pages

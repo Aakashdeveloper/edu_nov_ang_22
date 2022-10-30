@@ -1,10 +1,12 @@
+// import what need for file
 import { Component } from '@angular/core';
 
+//decorator > meta data (static contnent)
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  //template: `<h1>Hii From Developer Funnel</h1>`
+  templateUrl:'./app.component.html'
 })
-export class AppComponent {
-  title = 'flipapp';
-}
+
+//export class > logic
+export class AppComponent{}
