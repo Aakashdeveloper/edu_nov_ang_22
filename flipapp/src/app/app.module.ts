@@ -4,13 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './Footer/Footer.component';
 import { HeaderComponent } from './Header/Header.component';
+import { HomeComponent } from './Home/Home.component';
+import { ClothsComponent } from './Home/cloths/cloths.component';
+import { MobileComponent } from './Home/mobile/mobile.component';
 
 @NgModule({
     // all the component and pipe
     declarations:[
         AppComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        HomeComponent,
+        ClothsComponent,
+        MobileComponent
     ],
 
     // All the modules

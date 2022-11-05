@@ -183,3 +183,42 @@ Services >>>>> Injectable
 
 Routing >>>>> NgModule
 > To Navigate between the pages
+
+
+Data Binding
+One Way binding
+> Data Binding {{}}
+> Property Binding []
+> Event Binding ()
+Two Way binding [()]
+
+
+//////////
+ng g c cloths
+ng generate component componentName
+
+
+API
+
+Page1
+# Top strip > https://devflipapi.herokuapp.com/topstrip
+# Cloths >  https://devflipapi.herokuapp.com/item/cloths?limit=5
+# Mobiles > https://devflipapi.herokuapp.com/item/mobile?limit=5
+# Watches > https://devflipapi.herokuapp.com/item/watches?limit=5
+# Formals > https://devflipapi.herokuapp.com/item/formals?limit=5
+
+Page 2(Listing)
+# List of item on basis of category
+# Cloths > https://devflipapi.herokuapp.com/item/cloths
+# Mobiles > https://devflipapi.herokuapp.com/item/mobile
+# Filter on Basis of Cost
+> https://devflipapi.herokuapp.com/filter/price/bags?lcost=50&hcost=500
+# Filter on Basis of StarRating
+> https://devflipapi.herokuapp.com/filter/rating/cloths/4
+
+Page3 (Details)
+> https://devflipapi.herokuapp.com/item/cloths?itemId=12
+
+
+structral directive
+> *ngFor
