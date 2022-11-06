@@ -222,3 +222,34 @@ Page3 (Details)
 
 structral directive
 > *ngFor
+
+////////
+var a = "amSterDam"
+
+a.charAt(0).toUpperCase()
+'A'
+a.slice(1)
+'mSterDam'
+a.slice(2)
+'SterDam'
+a.slice(1).toLowerCase()
+'msterdam'
+a.charAt(0).toUpperCase()+a.slice(1).toLowerCase()
+'Amsterdam'
+
+var a = "paRIs"
+a.charAt(0).toUpperCase()+a.slice(1).toLowerCase()
+'Paris'
+
+
+parmas
+> What we pass after /
+> Params are complusory to define in routing
+> If params are define than passing in route is manditory
+> Should use for 1 or 2 values
+
+queryparams
+> What we pass after ?
+> No need to define in routing
+> optional
+> Can be use for multiple values

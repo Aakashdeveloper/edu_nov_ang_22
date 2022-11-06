@@ -10,7 +10,8 @@ import { ITop } from '../model/home.model';
 export class HomeComponent {
     // heading:string = "Top Strip Section";
     // testImage:string = "https://b.zmtcdn.com/data/reviews_photos/51b/7b7779a74b0ac806ac690da9cb55d51b_1560845012.jpg";
-    // opend:any = new Date();
+    opend:any = new Date();
+    price:number = 100
 
     topData:ITop[] = [
         {

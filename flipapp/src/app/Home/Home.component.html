@@ -1,9 +1,9 @@
 <div id="top-strip">
        <div id="strip-container">
            <figure class="strip-icons" *ngFor="let item of topData">
-               <a href="#">
+               <a [routerLink]="['/listing',item.name]">
                     <img [src]="item.imgUrl" alt="toplist"/>
-                    <figcaption>{{item.name}}</figcaption>
+                    <figcaption>{{item.name | MyUpper:'titleCase'}}</figcaption>
                </a>
             </figure>
         </div>
@@ -41,6 +41,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    
     <app-cloths></app-cloths>
     <app-mobile></app-mobile>
 
@@ -49,4 +50,8 @@ Data Binding
  <h1>{{heading}}</h1>
 Property Binding
 <img [src]="testImage"/>  
-<h1>{{opend}}</h1> -->
+<h1>{{opend}}</h1>
+<h1>{{opend | date:'EEEE, MMM d, y'}}</h1>
+<h1>{{price | currency:'INR'}}</h1>
+
+-->
