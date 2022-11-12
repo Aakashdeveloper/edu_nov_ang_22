@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http'
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './Footer/Footer.component';
@@ -13,6 +15,9 @@ import { MyUpperPipe } from './pipes/myUpper.pipe';
 import { ListingComponent } from './listing/listing.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeService } from './services/home.service';
+import { ListingService } from './services/listing.service';
+import { RatingFilter } from './filter/ratingFilter.component';
 
 
 @NgModule({
@@ -26,7 +31,8 @@ import { AppRoutingModule } from './app-routing.module';
         MobileComponent,
         MyUpperPipe,
         ListingComponent,
-        NotfoundComponent
+        NotfoundComponent,
+        RatingFilter
     ],
 
     // All the modules
@@ -34,11 +40,16 @@ import { AppRoutingModule } from './app-routing.module';
         BrowserModule,
         BrowserAnimationsModule,
         CarouselModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
     ],
 
     // All the services
-    providers:[],
+    providers:[
+        HomeService,
+        ListingService
+    ],
 
     //only and only main component
     bootstrap:[

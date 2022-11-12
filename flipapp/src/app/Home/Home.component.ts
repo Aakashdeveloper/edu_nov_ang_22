@@ -1,5 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ITop } from '../model/home.model';
+import { HomeService } from '../services/home.service'
 
 @Component({
     selector: 'app-home',
@@ -7,69 +8,26 @@ import { ITop } from '../model/home.model';
     styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit {
     // heading:string = "Top Strip Section";
     // testImage:string = "https://b.zmtcdn.com/data/reviews_photos/51b/7b7779a74b0ac806ac690da9cb55d51b_1560845012.jpg";
     opend:any = new Date();
     price:number = 100
 
-    topData:ITop[] = [
-        {
-          "_id": "6304f34a4fda6200b4ebe0ec",
-          "id": 6,
-          "name": "Appliances",
-          "imgUrl": "https://i.ibb.co/qFzmCwd/appliances.png"
-        },
-        {
-          "_id": "6304f34a4fda6200b4ebe0e8",
-          "id": 2,
-          "name": "mobile",
-          "imgUrl": "https://i.ibb.co/Jptfv9B/mobiles.png"
-        },
-        {
-          "_id": "6304f34a4fda6200b4ebe0ee",
-          "id": 8,
-          "name": "watches",
-          "imgUrl": "https://i.ibb.co/64kY2Cd/toys.png"
-        },
-        {
-          "_id": "6304f34a4fda6200b4ebe0e7",
-          "id": 1,
-          "name": "formals",
-          "imgUrl": "https://i.ibb.co/72tFJDD/top-offers.png"
-        },
-        {
-          "_id": "6304f34a4fda6200b4ebe0eb",
-          "id": 5,
-          "name": "Home",
-          "imgUrl": "https://i.ibb.co/3zh4qsF/home.jpg"
-        },
-        {
-            "_id": "6304f34a4fda6200b4ebe0ea",
-            "id": 4,
-            "name": "Electronics",
-            "imgUrl": "https://i.ibb.co/JtxLjXB/electronics.png"
-          },
-          {
-            "_id": "6304f34a4fda6200b4ebe0ef",
-            "id": 9,
-            "name": "Grocery",
-            "imgUrl": "https://i.ibb.co/PZvWQpp/grocery.png"
-          },
-          {
-            "_id": "6304f34a4fda6200b4ebe0ed",
-            "id": 7,
-            "name": "Travel",
-            "imgUrl": "https://i.ibb.co/X2Tp0Bd/travel.png"
-          },
-          {
-            "_id": "6304f34a4fda6200b4ebe0e9",
-            "id": 3,
-            "name": "cloths",
-            "imgUrl": "https://i.ibb.co/NW23z09/fashion.png"
-          }
-        
-    ]
+    topData:ITop[] = [ ]
+    
+    // Any declarations
+    constructor(private homeService:HomeService){
+      console.log("inside constructor")
+    }
+
+    // any thing that we want to call on page load
+    ngOnInit():void{
+      this.homeService.getTopStrip()
+          .subscribe((data:ITop[]) => this.topData = data)
+    }
+
+
 
     carouselImage:any[]=[
       {"name":"assets/images/carousel-imgs/oppo-k10.jpg"},

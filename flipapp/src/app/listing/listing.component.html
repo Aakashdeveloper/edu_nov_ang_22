@@ -1,1 +1,49 @@
-<h3>{{itemType}}</h3>
+<div class="main">
+    <div class="filters">
+        <app-rating-filter></app-rating-filter>
+    </div>
+
+    <div class="content" *ngIf="catData && catData.length; else noData">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input placeholder="Enter Product Name" class="form-control"
+                    [(ngModel)]="userInput"/>
+                </div>
+                <p>Result For <b>{{userInput}}</b></p>
+                <p>Number of Results <b></b></p>
+            </div>
+        </div>
+        <div *ngFor="let data of catData">
+            <a class="custom-card-anchor">
+                <div class="card custom-card">
+                    <img [src]="data.image" class="card-img-top card-img-width image" alt="image"/>
+                    <div class="card-body">
+                        <div class="card-title description">{{data.description}}</div>
+                        <div class="card-text">
+                            <div class="brand"></div>
+                            <div class="color">Black</div>
+                            <span class="rating">
+                                <button class="btn btn-success btn-sm"><span class="stars">{{data.hidden_stars}}</span> <i class="bi bi-star-fill stars-star"></i></button>
+                                <span class="ratings">({{data.item_id}})</span> 
+                            </span>
+                            <div class="price">
+                                <span class="new_price">&#8377;{{data.new_price}} </span>
+                                <del><span class="old_price">&#8377;{{data.old_price}}</span></del>
+                                <span class="discount"> {{data.discount}}% off</span>
+                            </div>
+                            <div class="delivery_type">{{data.delivery_type}}</div>
+                            <div class="offer">Buy 2 items, save 3% extra</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <ng-template #noData>
+        <h2>Loading .....</h2>
+        <img src="../../assets/loader.gif"/>
+    </ng-template>
+
+</div>
