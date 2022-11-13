@@ -11,7 +11,10 @@ export class ListingComponent implements OnInit {
 
   catName:string='';
   userInput:string=''
-  catData:any[]=[]
+  catData:any[]=[];
+  afterClick:string=''
+  filterText:string='Rating Filter'
+  filterText1:string='Cost Filter'
 
   constructor(
     private route:ActivatedRoute,
@@ -25,6 +28,27 @@ export class ListingComponent implements OnInit {
     this.listingService.getDataWrtC(this.catName)
       .subscribe((data:any[]) => this.catData = data)
 
+  }
+
+  dataReceive(ratingVal:string){
+    console.log(">>>rating Val",ratingVal)
+    this.listingService.getDataWrtR(ratingVal,this.catName)
+      .subscribe((data:any[]) => {
+        this.catData = data
+      })
+  }
+
+  costDataReceive(cost:string){
+    let lcost = Number(cost.split('-')[0])
+    let hcost = Number(cost.split('-')[1])
+    this.listingService.getDataWrtCost(lcost,hcost,this.catName)
+      .subscribe((data:any[]) => {
+        this.catData = data
+      })
+  }
+
+  myClick=()=>{
+    this.afterClick = "Event Binding Done"
   }
 
 }

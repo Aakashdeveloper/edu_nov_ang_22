@@ -1,6 +1,9 @@
 <div class="main">
     <div class="filters">
-        <app-rating-filter></app-rating-filter>
+        <app-rating-filter [filterName]="filterText"
+        (ratingClicked)="dataReceive($event)"></app-rating-filter>
+        <app-cost-filter [filterName]="filterText1"
+        (costClicked)="costDataReceive($event)"></app-cost-filter>
     </div>
 
     <div class="content" *ngIf="catData && catData.length; else noData">
@@ -11,11 +14,13 @@
                     [(ngModel)]="userInput"/>
                 </div>
                 <p>Result For <b>{{userInput}}</b></p>
-                <p>Number of Results <b></b></p>
+                <p>Number of Results <b>{{(catData | searchFilter:userInput).length}}</b></p>
+                <p>{{afterClick}}</p>
+                <button (click)="myClick()">Click Me</button>
             </div>
         </div>
-        <div *ngFor="let data of catData">
-            <a class="custom-card-anchor">
+        <div *ngFor="let data of catData | searchFilter:userInput">
+            <a class="custom-card-anchor" [routerLink]="['/details']" [queryParams]="{catName:catName,id:data.item_id}">
                 <div class="card custom-card">
                     <img [src]="data.image" class="card-img-top card-img-width image" alt="image"/>
                     <div class="card-body">

@@ -1,0 +1,42 @@
+<hr/>
+<h3>{{filterName}}</h3>
+<div class="form-check">
+    <label for="star">
+        <input type="radio" class="form-check-input" id="star" value="0-300"
+        name="costStar" [(ngModel)]="costVal"
+        (change)="onCostSelect()"/>
+        0-300
+    </label>
+</div>
+<div class="form-check">
+    <label for="star">
+        <input type="radio" class="form-check-input" id="star" value="301-800"
+        name="costStar" [(ngModel)]="costVal"
+        (change)="onCostSelect()"/>
+        301-800
+    </label>
+</div>
+<div class="form-check">
+    <label for="star">
+        <input type="radio" class="form-check-input" id="star" value="801-1000"
+        name="costStar" [(ngModel)]="costVal"
+        (change)="onCostSelect()"/>
+        801-1000
+    </label>
+</div>
+<div class="form-check">
+    <label for="star">
+        <input type="radio" class="form-check-input" id="star" value="1001-5000"
+        name="costStar" [(ngModel)]="costVal"
+        (change)="onCostSelect()"/>
+        1001-5000
+    </label>
+</div>
+<div class="form-check">
+    <label for="star">
+        <input type="radio" class="form-check-input" id="star" value="5001-20000"
+        name="costStar" [(ngModel)]="costVal"
+        (change)="onCostSelect()"/>
+        5001-20000
+    </label>
+</div>

@@ -214,7 +214,7 @@ Page 2(Listing)
 # Filter on Basis of Cost
 > https://devflipapi.herokuapp.com/filter/price/bags?lcost=50&hcost=500
 # Filter on Basis of StarRating
-> https://devflipapi.herokuapp.com/filter/rating/cloths/4
+> https://devflipapi.herokuapp.com/filter/rating/cloths/2
 
 Page3 (Details)
 > https://devflipapi.herokuapp.com/item/cloths?itemId=12
@@ -253,3 +253,66 @@ queryparams
 > No need to define in routing
 > optional
 > Can be use for multiple values
+
+var a = [0,1,2,3]
+a.filter((data) => {return data*2})
+[1,2,3]
+
+var a = [2,56,34,76,12,45,27,34,86]
+a.filter((data) => {return data>50})
+[56, 76, 86]
+
+
+*Filter only return those value for
+which output or condition is true
+
+var city = ["Amsterdam","Venice","Boston","London","Helsinki"]
+city.indexOf('Amsterdam')
+0
+city.indexOf('Boston')
+2
+city.indexOf('Insburg')
+-1
+city.indexOf('Nice')
+-1
+
+
+
+var a = ['a',1,2,3]
+var b = [2,4,5,'b']
+
+a+b
+'a,1,2,32,4,5,b'
+
+a.concat(b)
+['a', 1, 2, 3, 2, 4, 5, 'b']
+
+
+@Input
+> Parent to child
+> Property Binding
+@Output
+> Child to parent
+> Event Binding
+(event emitter)
+
+//zomato
+(get) cityname >           https://zomatoajulypi.herokuapp.com/location
+(get) restwrtcity >        https://zomatoajulypi.herokuapp.com/restaurant?stateId=1
+(get) quickSearch>         https://zomatoajulypi.herokuapp.com/quicksearch
+
+(get) onbasisofMeal >      https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id=
+(get) cuisinefilter >      https://zomatoajulypi.herokuapp.com/filter/4?cuisine=1
+(get) costfilter >         https://zomatoajulypi.herokuapp.com/filter/1?hcost=1000&lcost=500
+
+(get) restdetails >        http://zomatoajulypi.herokuapp.com/details/1
+(get) menu >               https://zomatoajulypi.herokuapp.com/menu/1
+
+(post) orderspage >        http://zomatoajulypi.herokuapp.com/menuItem
+                           body [1,4,5]
+(post)placeOrder >        
+
+(get) allorder>            
+       
+(get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
+https://developerpayment.herokuapp.com/paynow

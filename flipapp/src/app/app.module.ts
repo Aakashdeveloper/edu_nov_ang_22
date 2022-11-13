@@ -18,6 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeService } from './services/home.service';
 import { ListingService } from './services/listing.service';
 import { RatingFilter } from './filter/ratingFilter.component';
+import { ProdSearchPipe } from './pipes/search.pipe';
+import { CostFilter } from './filter/costFilter.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { RatingFilter } from './filter/ratingFilter.component';
         MyUpperPipe,
         ListingComponent,
         NotfoundComponent,
-        RatingFilter
+        RatingFilter,
+        ProdSearchPipe,
+        CostFilter,
+        DetailsComponent
     ],
 
     // All the modules

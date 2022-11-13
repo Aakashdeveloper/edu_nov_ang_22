@@ -1,30 +1,34 @@
 <hr/>
-<h3>Rating Filter</h3>
+<h3>{{filterName}}</h3>
 <div class="form-check">
     <label for="star">
         <input type="radio" class="form-check-input" id="star" value="4"
-        name="ratingStar"/>
+        name="ratingStar" [(ngModel)]="ratingVal"
+        (change)="onRatingSelect()"/>
         4 <span class="glyphicon glyphicon-star-empty"></span> & above
     </label>
 </div>
 <div class="form-check">
     <label for="star">
         <input type="radio" class="form-check-input" id="star" value="3"
-        name="ratingStar"/>
+        name="ratingStar" [(ngModel)]="ratingVal"
+        (change)="onRatingSelect()"/>
         3 <span class="glyphicon glyphicon-star-empty"></span> & above
     </label>
 </div>
 <div class="form-check">
     <label for="star">
         <input type="radio" class="form-check-input" id="star" value="2"
-        name="ratingStar"/>
+        name="ratingStar" [(ngModel)]="ratingVal"
+        (change)="onRatingSelect()"/>
         2 <span class="glyphicon glyphicon-star-empty"></span> & above
     </label>
 </div>
 <div class="form-check">
     <label for="star">
         <input type="radio" class="form-check-input" id="star" value="1"
-        name="ratingStar"/>
+        name="ratingStar" [(ngModel)]="ratingVal"
+        (change)="onRatingSelect()"/>
         1 <span class="glyphicon glyphicon-star-empty"></span> & above
     </label>
 </div>
