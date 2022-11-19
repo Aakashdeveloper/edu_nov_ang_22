@@ -27,7 +27,6 @@ export class ListingComponent implements OnInit {
     sessionStorage.setItem('catName', this.catName);
     this.listingService.getDataWrtC(this.catName)
       .subscribe((data:any[]) => this.catData = data)
-
   }
 
   dataReceive(ratingVal:string){

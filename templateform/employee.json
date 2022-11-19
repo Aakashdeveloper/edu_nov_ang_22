@@ -1,0 +1,36 @@
+{
+  "employee": [
+    {
+      "firstName": "Kanika",
+      "lastName": "Sharma",
+      "email": "kanika@gmail.com",
+      "password": "12345678",
+      "clang": "Node",
+      "id": 1
+    },
+    {
+      "firstName": "Amit",
+      "lastName": "Mishra",
+      "email": "amit@gmail.com",
+      "password": "12345678",
+      "clang": "Angular",
+      "id": 2
+    },
+    {
+      "firstName": "John",
+      "lastName": "dew",
+      "email": "john@gmail.com",
+      "password": "12345678",
+      "clang": "JavaScript",
+      "id": 3
+    },
+    {
+      "firstName": "Kanika",
+      "lastName": "Sharma",
+      "email": "kanika@gmail.com",
+      "password": "12345678",
+      "clang": "Node",
+      "id": 4
+    }
+  ]
+}
