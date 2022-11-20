@@ -318,7 +318,10 @@ a.concat(b)
 (get) allorder>            
        
 (get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
+https://zomatoapi.onrender.com
+
 https://developerpayment.herokuapp.com/paynow
+https://paymentgatway.onrender.com
 
 var city = ["Amsterdam","Venice","Boston","London","Helsinki"]
 city.pop(2)
@@ -365,3 +368,8 @@ Dummy api
 /******UserInfo*****/
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
+
+https://developerjwt.onrender.com/
+
+
+{range:true}
