@@ -1,1 +1,15 @@
 https://raw.githubusercontent.com/Aakashdeveloper/Aakashdeveloper/master/README.md
+
+//first time from new folder//
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://aakashdeveloper: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@github.com/Aakashdeveloper/angularcode.git
+git push -u origin master
+
+//Next all time from same folder//
+git add .
+git commit -m "first commit"
+git push
+
+git checkout -b branchname

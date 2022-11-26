@@ -21,29 +21,28 @@ NPM
 FullStack Flipkart app
 Template Forms
 Reactive Forms
-
 login logout (jwt)
+Dummy api
+
+> Github
+
+
 Flipcart+login logout
 Payment
+Deployment
+> Heroku/Render.com
+> Netlify
+> Angular over node server
+> Angular over python server
+> Jenkins
+> AWS
+> Docker 
+> nginx
 
 Testing
 Multilingual
 Ang Material
 LazyLoading
-
-Deployment
-> Github
-> Jenkins
-> AWS
-> Heroku
-> Netlify
-> Angular over node server
-> Angular over python server
-> Docker 
-> nginx
-
-Dummy api
-
 >>>>>>>>NO Covered<<<<<>>>>>
 > HTML CSS JAVASCRIPT
 > No Api Building (app,loginlogout)

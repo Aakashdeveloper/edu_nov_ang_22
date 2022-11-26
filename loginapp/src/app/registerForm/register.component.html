@@ -1,0 +1,51 @@
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Register Form
+        </div>
+        <div class="panel-body">
+            <form #form="ngForm" (submit)="submitForm(form)">
+                <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
+                    <label class="control-label" for="fname">FirstName</label>
+                    <input class="form-control" type="text" required placeholder="First Name"
+                    id="fname" [(ngModel)]="myEmployee.name" name="name"
+                    #firstname="ngModel"
+                    />
+                </div>
+                <div class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">
+                    FirstName is Required
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group" [class.has-error]="mail.invalid && mail.dirty">
+                        <label for="email" class="control-label">Email</label>
+                        <input class="form-control" type="text" id="email"
+                        name="email" [(ngModel)]="myEmployee.email" #mail="ngModel"
+                        pattern=^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,5})$/>
+                        <div class="alert alert-danger" *ngIf="mail.invalid && mail.dirty">
+                            Please Enter The Valid Email
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group" [class.has-error]="pwd.invalid && pwd.dirty">
+                        <label for="password" class="control-label">Password</label>
+                        <input class="form-control" type="password" id="password"
+                        name="password" [(ngModel)]="myEmployee.password" #pwd="ngModel"
+                        minlength="8"
+                      />
+                      <div class="alert alert-danger" *ngIf="pwd.invalid && pwd.dirty">
+                            Min length of password should be 8
+                      </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="phone" class="control-label">Phone</label>
+                        <input class="form-control" type="password" id="phone"
+                        name="phone" [(ngModel)]="myEmployee.phone"/>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

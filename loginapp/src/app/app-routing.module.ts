@@ -1,13 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { LoginComponent } from './loginForm/login.component';
+import { RegisterComponent } from './registerForm/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UserListComponent } from './userList/userList.component';
+import { ProfileGaurdService } from './gaurds/profilegaurd.service';
+import { UserGaurdService } from './gaurds/userGaurd.service';
 
 const routes: Routes = [
-  {path:'', component: EmployeeFormComponent},
+  {path:'users',canActivate:[UserGaurdService], component: UserListComponent},
+  {path:'profile',canActivate:[ProfileGaurdService], component: ProfileComponent},
+  {path:'login', component: LoginComponent},
+  {path:'register', component: RegisterComponent},
+  {path:'', component: RegisterComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    ProfileGaurdService,
+    UserGaurdService
+  ]
 })
 export class AppRoutingModule { }
