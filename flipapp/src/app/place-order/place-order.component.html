@@ -1,1 +1,43 @@
-<p>place-order works!</p>
+<hr/>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3>Order For </h3>
+        </div>
+        <div class="panel-body">
+            <form #form="ngForm" (submit)="submitForm()">
+                <div class="form-group">
+                    <label class="control-label">Id</label>
+                    <input class="form-control" readOnly
+                    id="id" [(ngModel)]="orderid" name="id"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <input class="form-control"
+                    id="name" [(ngModel)]="myOrder.name" name="name"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input class="form-control"
+                    id="email" [(ngModel)]="myOrder.email" name="email"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Address</label>
+                    <input class="form-control"
+                    id="address" [(ngModel)]="myOrder.address" name="address"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Phone</label>
+                    <input class="form-control"
+                    id="phone" [(ngModel)]="myOrder.phone" name="phone"/>
+                </div>
+                
+                
+                
+                <button class="btn btn-success" type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

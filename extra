@@ -23,26 +23,24 @@ Template Forms
 Reactive Forms
 login logout (jwt)
 Dummy api
-
-> Github
-
-
-Flipcart+login logout
-Payment
 Deployment
-> Heroku/Render.com
-> Netlify
+> Github
 > Angular over node server
 > Angular over python server
-> Jenkins
+> Netlify(https://www.netlify.com/)
+> Heroku/Render.com
 > AWS
-> Docker 
+> Jenkins
 > nginx
+> Docker 
 
+LazyLoading
+Flipcart+login logout
+Payment
 Testing
 Multilingual
 Ang Material
-LazyLoading
+
 >>>>>>>>NO Covered<<<<<>>>>>
 > HTML CSS JAVASCRIPT
 > No Api Building (app,loginlogout)

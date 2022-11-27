@@ -10,7 +10,7 @@ const routes: Routes = [
    {path:'listing/:item',component: ListingComponent},
    {path:'home', component:HomeComponent},
    {path:'details', component:DetailsComponent},
-   {path:'placeOrder/:itemName', component:PlaceOrderComponent},
+   {path:'placeOrder/:id/:catName', component:PlaceOrderComponent},
    {path:'', component:HomeComponent},
    {path:'**',pathMatch:'full',component:NotfoundComponent}
 ]
