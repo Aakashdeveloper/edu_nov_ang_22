@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { IOrder } from './place.model';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router'; 
+import { OrderService } from '../services/order.service';
 
 
 @Component({
@@ -9,30 +10,34 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './place-order.component.html',
   styleUrls: ['./place-order.component.css']
 })
-export class PlaceOrderComponent implements OnInit {
+export class PlaceOrderComponent {
 
   catName:string|null = '';
   id:number = 0;
   orderid: number = Math.floor(Math.random() * 100000);
-  price: number = 0;
-  prodName: string = '';
+  price: number = 670;
+  prodName: string = this.route.snapshot.params['itemname']
   url:string =''
-
+  userInfo:string|null = localStorage.getItem('userResponse');
+ 
   constructor(
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private orderService:OrderService
   ) { }
 
-  name = "";
-  email = "";
-  phone = "";
+  name = this.userInfo?this.userInfo.split(',')[1]:''
+  email = this.userInfo?this.userInfo.split(',')[2]:''
+  phone = this.userInfo?this.userInfo.split(',')[3]:''
 
   myOrder = new IOrder(this.name,this.email,'Hn 88 new delhi',Number(this.phone),this.price,this.orderid,this.prodName)
 
-  ngOnInit(): void {
-    this.catName = this.route.snapshot.params['catName']
-    this.id = this.route.snapshot.params['id']
-  }
 
-  submitForm(){}
+
+  submitForm(Form:NgForm):void{
+    console.log(Form.value)
+    this.orderService.postOrder(Form.value)
+    .subscribe((res:any[]) => {console.log('Order Placed')})
+    this.url='http://localhost:4000/paynow?amount='+Form.value.cost+'&orderId='+Form.value.id+'&email='+Form.value.email+'&phone='+Form.value.phone
+  }
 
 }

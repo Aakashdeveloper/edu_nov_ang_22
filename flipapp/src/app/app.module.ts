@@ -13,6 +13,12 @@ import { DetailsService } from './services/details.service';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { HomeModule } from './Home/Home.module';
 import { ListingModule } from './listing/lisiting.module';
+import { OrderService } from './services/order.service';
+import { ViewBookingComponent } from './view-booking/view-booking.component';
+import { LoginComponent } from './loginForm/login.component';
+import { RegisterComponent } from './registerForm/register.component';
+import { LoginService } from './loginForm/login.service';
+import { RegisterService } from './registerForm/register.service';
 
 @NgModule({
     // all the component and pipe
@@ -22,7 +28,10 @@ import { ListingModule } from './listing/lisiting.module';
         FooterComponent,
         NotfoundComponent,
         DetailsComponent,
-        PlaceOrderComponent
+        PlaceOrderComponent,
+        ViewBookingComponent,
+        RegisterComponent,
+        LoginComponent
     ],
     // All the modules
     imports:[
@@ -31,11 +40,15 @@ import { ListingModule } from './listing/lisiting.module';
         HttpClientModule,
         FormsModule,
         HomeModule,
-        ListingModule
+        ListingModule,
+       
     ],
     // All the services
     providers:[
-        DetailsService
+        DetailsService,
+        OrderService,
+        LoginService,
+        RegisterService
     ],
     //only and only main component
     bootstrap:[

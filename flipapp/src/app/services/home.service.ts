@@ -6,7 +6,7 @@ import { ITop,ICloths } from '../model/home.model';
 @Injectable()
 
 export class HomeService {
-    private url = "https://devflipapi.herokuapp.com";
+    private url = "https://devflipapi.onrender.com";
 
  
     constructor(private http: HttpClient){}

@@ -1,0 +1,37 @@
+{
+  "orders": [
+    {
+      "cost": 670,
+      "product_name": "realme Narzo 50A (Oxygen Blue, 64 GB)",
+      "id": 9023,
+      "name": "Aakash",
+      "email": "a@a.com",
+      "address": "Hn 88 new delhi",
+      "phone": 9876543210,
+      "status": "TXN_SUCCESS",
+      "date": "2022-12-03 22:27:02.0",
+      "bank": "HDFC Bank"
+    },
+    {
+      "cost": 670,
+      "product_name": "Unstitched Polycotton Shirt Fabric Floral Print",
+      "id": 48994,
+      "name": "Aakash",
+      "email": "a@a.com",
+      "address": "Hn 88 new delhi",
+      "phone": 9876543210
+    },
+    {
+      "cost": 670,
+      "product_name": "realme Narzo 50A (Oxygen Blue, 64 GB)",
+      "id": 77990,
+      "name": "Nidhi",
+      "email": "nidhi@gmail.com",
+      "address": "Hn 88 new delhi",
+      "phone": 9876543210,
+      "status": "TXN_SUCCESS",
+      "date": "2022-12-03 23:38:19.0",
+      "bank": "Bharat Bank"
+    }
+  ]
+}

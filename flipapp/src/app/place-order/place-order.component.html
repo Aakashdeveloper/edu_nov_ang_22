@@ -2,10 +2,13 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3>Order For </h3>
+            <h3>Order For {{prodName}}</h3>
         </div>
         <div class="panel-body">
-            <form #form="ngForm" (submit)="submitForm()">
+            <form #form="ngForm" (submit)="submitForm(form)">
+                <input type="hidden" [(ngModel)]="myOrder.cost" name="cost"/>
+                <input type="hidden" [(ngModel)]="myOrder.product_name" name="product_name"/>
+
                 <div class="form-group">
                     <label class="control-label">Id</label>
                     <input class="form-control" readOnly
@@ -31,12 +34,39 @@
                     <input class="form-control"
                     id="phone" [(ngModel)]="myOrder.phone" name="phone"/>
                 </div>
+                <h2>
+                    <span class="label label-info">{{price|currency:'INR'}}</span>   
+                </h2>
                 
                 
                 
-                <button class="btn btn-success" type="submit">
+                <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#myModal">
                     Submit
                 </button>
+
+                <!---Modal-->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                  
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Order Payment for Id {{myOrder.id}}</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p>Process for the payment Rs.{{myOrder.cost}}</p>
+                          <a class="btn btn-info" [href]="url">
+                              PayNow
+                          </a>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>
             </form>
         </div>
     </div>

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/form.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { FormService } from './forms/form.service';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormService } from './forms/form.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [
     FormService

@@ -12,14 +12,24 @@
         <button><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
     <div id="login">
-        <div>
-            <a class="btn btn-info">
+        <div *ngIf='token == ""'>
+            <a class="btn btn-info" [routerLink]="['/login']">
                 <span class="glyphicon glyphicon-log-in"></span>
                 Login
             </a> &nbsp;&nbsp;&nbsp;
-            <a class="btn btn-info">
+            <a class="btn btn-warning" [routerLink]="['/register']">
                 <span class="glyphicon glyphicon-user"></span>
                 Register
+            </a>
+        </div>
+        <div *ngIf='token !== ""'>
+            <a class="btn btn-info" [routerLink]="['/login']">
+                <span class="glyphicon glyphicon-user"></span>
+                Hi {{userInfo.name}}
+            </a> &nbsp;&nbsp;&nbsp;
+            <a class="btn btn-danger" (click)="logoutUser()">
+                <span class="glyphicon glyphicon-log-out"></span>
+                Logout
             </a>
         </div>
     </div>

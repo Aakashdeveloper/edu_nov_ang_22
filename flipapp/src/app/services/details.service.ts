@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 
 export class DetailsService {
-    private url = "https://devflipapi.herokuapp.com";
+    private url = "https://devflipapi.onrender.com";
 
 
     constructor(private http: HttpClient){}

@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            Login Form
+        </div>
+        <div class="panel-body">
+            <h2 style="color:red">{{loginError}}</h2>
+            <form #form="ngForm" (submit)="submitForm(form)">
+                <div class="row">
+                    <div class="col-md-6 form-group" [class.has-error]="mail.invalid && mail.dirty">
+                        <label for="email" class="control-label">Email</label>
+                        <input class="form-control" type="text" id="email"
+                        name="email" [(ngModel)]="myEmployee.email" #mail="ngModel"
+                        pattern=^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,5})$/>
+                        <div class="alert alert-danger" *ngIf="mail.invalid && mail.dirty">
+                            Please Enter The Valid Email
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group" [class.has-error]="pwd.invalid && pwd.dirty">
+                        <label for="password" class="control-label">Password</label>
+                        <input class="form-control" id="password"
+                        name="password" [(ngModel)]="myEmployee.password" #pwd="ngModel"
+                        minlength="8"
+                      />
+                      <div class="alert alert-danger" *ngIf="pwd.invalid && pwd.dirty">
+                            Min length of password should be 8
+                      </div>
+                    </div>
+                </div>
+                <button class="btn btn-info" type="submit">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
