@@ -1,0 +1,32 @@
+<div class="container">
+    <form #busSearch = "ngForm">
+        <div class="busSearchContainer">
+            <div class="cityContainer">
+                <div class="selecCity">
+                    <span>Leaving From</span>
+                    <select name="from" [(ngModel)]="journey.from">
+                        <option *ngFor="let place of places" value="{{place.id}}" >{{place.city}}</option>
+                        <!-- <option value="001" selected>Kolkata</option>
+                        <option value="002">Mumbai</option>
+                        <option value="003">Kochi</option>
+                        <option value="004">Pune</option> -->
+                    </select>
+                </div>
+                <div class="selecCity">
+                    <span>Going To</span>
+                    <select name="to" [(ngModel)]="journey.to">
+                        <option *ngFor="let place of places" value="{{place.id}}" >{{place.city}}</option>
+                        <!-- <option value="001">Kolkata</option>
+                        <option value="002" selected>Mumbai</option>
+                        <option value="003">Kochi</option>
+                        <option value="004">Pune</option> -->
+                    </select>
+                </div>
+            </div>
+            <span>Departing On</span>
+            <input class="form-control" name="selectedDate" placeholder="yyyy-mm-dd"  
+            name="dp" [(ngModel)]="selectedDate" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" autocomplete="false" [autocomplete]="false">
+            <button class="btn btn-outline-secondary" type="submit" (click)="getBusList()">Search Buses</button>
+        </div>
+    </form>
+</div>

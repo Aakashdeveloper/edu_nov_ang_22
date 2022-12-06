@@ -1,0 +1,115 @@
+@media screen and (min-width:701px){
+    .ticketContainer{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .ticketContainer .ticketArea{
+        width: 70%;
+        box-shadow: 2px 2px 2px 2px lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px 0px;
+    }
+    .ticketContainer .ticketArea .msg{
+        color:red;
+    }
+    .ticketContainer .ticketArea .btnContainer{
+        padding-top: 10px;
+    }
+    .ticketContainer .ticketArea .card{
+        width: 90%;
+        height: 90%;
+        box-shadow: 2px 2px 2px  lightgray;
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr 2fr;
+        padding: 10px;
+        row-gap: 5px;
+    }
+    .ticketContainer .ticketArea .card .title{
+        text-align: center;
+        font-weight: bold;
+    }
+    .ticketContainer .ticketArea .subheader{
+        display: flex;
+        font-weight: bold;
+    }
+    .ticketContainer .ticketArea .subheader div{
+        width: 50%;
+        background-color: #f9f9a8;
+        padding: 10px;
+    }
+    .ticketContainer .ticketArea .tableView{
+        display: grid;
+        grid-template-rows: 1fr 4fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border: 1px solid lightgray;
+        padding: 5px;
+    }
+    .ticketContainer .ticketArea .tableView .item .user{
+        font-weight: bold;
+    }
+    .ticketContainer .ticketArea .tableView .item.header{
+        font-weight: bold;
+    }
+}
+@media screen and (max-width:700px){
+    .ticketContainer{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .ticketContainer .ticketArea{
+        width: 100%;
+        box-shadow: 2px 2px 2px 2px lightgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    .ticketContainer .ticketArea .msg{
+        color:red;
+    }
+    .ticketContainer .ticketArea .card{
+        width: 99%;
+        height: 99%;
+        box-shadow: 2px 2px 2px  lightgray;
+        display: grid;
+        grid-template-rows: 1fr 1fr 2fr 2fr;
+        padding: 10px;
+        row-gap: 5px;
+    }
+    .ticketContainer .ticketArea .card .title{
+        text-align: center;
+        font-weight: bold;
+    }
+    .ticketContainer .ticketArea .subheader{
+        display: flex;
+        font-weight: bold;
+    }
+    .ticketContainer .ticketArea .subheader div{
+        width: 50%;
+        background-color: #f9f9a8;
+        padding: 10px;
+    }
+    .ticketContainer .ticketArea .tableView{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border: 1px solid lightgray;
+        padding: 5px;
+    }
+    .ticketContainer .ticketArea .tableView .item.header{
+        font-weight: bold;
+    }
+    .ticketContainer .ticketArea .btnContainer{
+        padding-top: 10px;
+    }
+}

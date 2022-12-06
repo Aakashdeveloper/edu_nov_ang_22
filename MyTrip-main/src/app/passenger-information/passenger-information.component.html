@@ -1,0 +1,15 @@
+<div class="passenger-container">
+    <form #userlogin = "ngForm" >
+        <div class="formcontainer">
+            <div class="items">
+                <span>User Name</span>
+                <input type = "text" name = "userName" placeholder = "user name" [(ngModel)]="user.userName" />
+                <span>User Mobile No</span>
+                <input type = "text" name = "mobile" placeholder = "mobile no" [(ngModel)]="user.mobile" />
+                <span>Email</span>
+                <input type = "email" name = "email" placeholder = "email" [(ngModel)]="user.email" />
+                <input class="btn btn-primary" type = "submit" value = "submit" (click)="onClickSubmit()" />
+            </div>
+        </div>
+    </form>
+</div>

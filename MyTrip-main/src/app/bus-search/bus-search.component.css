@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container .busSearchContainer{
+    display: grid;
+    width: 400px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.container .busSearchContainer .cityContainer{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.container .busSearchContainer .cityContainer .selecCity{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}

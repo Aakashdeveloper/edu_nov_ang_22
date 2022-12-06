@@ -1,0 +1,45 @@
+.review-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.review-container button{
+    margin-top: 10px;
+}
+.review-container .details{
+    background-color: inherit;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px;
+}
+.review-container .details .container{
+    height: 350px;
+    width: 350px;
+    background-color: #efe9e9;
+    border: 1px solid #797878;
+    border-radius: 10px;
+    padding: 48px;
+    font-size: 20px;
+}
+.review-container .details .container .title{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.review-container .details .container .journey{
+    font-size: 25px;
+    font-weight: bold;
+    color: orange;
+}
+.review-container .details .container .ticketDetails{
+    font-size: 18px;
+    color:black;
+}
+.review-container .details .container .ticketDetails.seat{
+    display: flex;
+}
+.review-container .details .container .ticketDetails.seat .seats{
+    color: orange;
+}

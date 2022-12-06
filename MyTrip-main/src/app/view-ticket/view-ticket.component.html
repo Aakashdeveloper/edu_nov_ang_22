@@ -1,0 +1,46 @@
+<div class="ticketContainer">
+    <div class="ticketArea">
+        <div class="card">
+            <div class="title">Obline Reservation</div>
+            <div class="subheader">
+                <div>{{from}} {{to}}</div>
+                <div>{{journeyDetails.date}}</div>
+            </div>
+            <div class="tableView">
+                <div class="item header">Passenger Details</div>
+                <div class="item header">Ticket Id</div>
+                <div class="item header">Seat No</div>
+                <div class="item header">Total Fare</div>
+                <div class="item">
+                    <div class="user">{{user.userName}}</div>
+                    <div>{{user.mobile}}</div>
+                    <div>{{user.email}}</div>
+                </div>
+                <div class="item">{{ticketId}}</div>
+                <div class="item">{{selectedSeats}}</div>
+                <div class="item">{{totalFare}}</div>
+            </div>
+            <div class="tableView">
+                <div class="item header">Bus Name</div>
+                <div class="item header">Reporting Time</div>
+                <div class="item header">Departure Time</div>
+                <div class="item"></div>
+                <div class="item">
+                    <div>{{bus.busName}}</div>
+                    <div>Coach Type: {{bus.type}}</div>
+                </div>
+                <div class="item">Before 30 mints</div>
+                <div class="item">{{bus.depTime}}</div>
+                <div class="item"></div>
+                
+            </div>
+        </div>
+        <div class="msg">
+            <span>**Please Bring this copy to ticket counter for collecting your ticket</span>
+        </div>
+        <div class="btnContainer">
+            <button class="btn btn-primary" type="button" (click) ="goBack()">Go to Home</button>
+        </div>
+    </div>
+    
+</div>

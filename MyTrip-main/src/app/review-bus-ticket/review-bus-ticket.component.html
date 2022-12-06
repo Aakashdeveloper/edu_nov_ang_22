@@ -1,0 +1,20 @@
+<div class="review-container">
+    <div class="details">
+        <div class="container">
+            <div class="title">Journey Details</div>
+            <hr/>
+            <div class="journey">{{from}} to {{to}}</div>
+            <div class="ticketDetails">Date  & Time : {{journey.date}} :{{busDetails.depTime}}</div>
+            <div class="ticketDetails">{{busDetails.busName}}</div>
+            <div class="ticketDetails">Coach Type : {{busDetails.type}}</div>
+            <div class="ticketDetails seat">
+                <div>Seat No(</div>
+                    <div class="seats">
+                        {{selectedSeats}}
+                    </div>
+                <div>)</div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="proceed()">Proceed</button>
+</div>

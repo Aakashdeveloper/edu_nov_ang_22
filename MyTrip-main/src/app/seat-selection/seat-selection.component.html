@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="seatSelection">
+        <div class="title">Select Seats</div>
+        <div class="busContainer">
+            <div class="wheel">
+                <img src="../../assets/steering.png" />
+            </div>
+            <div class="bus">
+                <div class="seat" *ngFor="let seat of seats">
+                    <div (click)="selectSeat(seat)" >
+                        <div *ngIf="!isSelectedSeat(seat); then available else selected"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #available>
+        <img src="../../assets/seat-available.png" />
+    </ng-template>
+    <ng-template #selected>
+        <img src="../../assets/seat-selected.png" />
+    </ng-template>
+    <div class="farecalc">
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Seats</th>
+                            <th scope="col">Fare</th>
+                            <th scope="col">Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr defColorOnEvent *ngFor="let bus of buses">
+                            <td>{{bus.id}}</td>
+                            <td>{{bus.cost}}</td>
+                            <td>{{bus.type}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div>
+                    <input type="text" class="form-control" placeholder={{total}} readonly="false" />
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary" (click)="proceed()">Confirm</button>
+                </div>
+            </div>
+    </div>
+</div>

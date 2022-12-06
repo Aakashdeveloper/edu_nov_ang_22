@@ -1,0 +1,24 @@
+<div class="buslistContainer">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Bus Name</th>
+                <th scope="col">Dept. Time</th>
+                <th scope="col">Coach Type</th>
+                <th scope="col">Seats Available</th>
+                <th scope="col">Fare</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr defColorOnEvent *ngFor="let bus of buslist">
+                <th scope="row">{{bus.busName}}</th>
+                <td>{{bus.depTime}}</td>
+                <td>{{bus.type}}</td>
+                <td>{{bus.seatAvailable}}</td>
+                <td>{{bus.fare}}</td>
+                <td><button class="btn btn-primary" (click)="getBusList(bus.id)">View Seats</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
