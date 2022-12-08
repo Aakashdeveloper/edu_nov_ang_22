@@ -315,7 +315,7 @@ a.concat(b)
 
 (get) allorder>            
        
-(get) restaurants>         https://zomatoapi.onrender.com/restaurants
+(get) restaurants>         http://3.17.216.66:4000/restaurants
 
 
 https://developerpayment.herokuapp.com/paynow
